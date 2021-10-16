@@ -2,7 +2,7 @@ import os
 import sys
 import shutil
 from sys import exit
-VERSION = "0.1.3"
+VERSION = "0.1.4"
 
 def newreminder(name,due,notes):
     os.chdir("reminders")
