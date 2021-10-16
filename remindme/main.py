@@ -2,6 +2,8 @@ import os
 import sys
 import shutil
 
+VERSION = 0.1
+
 def newreminder(name,due,notes):
     os.chdir("reminders")
     name_hex = str(name.encode().hex().upper())
@@ -57,7 +59,7 @@ def getnotes(name):
     os.chdir("..")
     return notes
 if __name__ == "__main__":
-    print("RemindMe by Awesomelewis2007")
+    print("RemindMe v"+str(VERSION),"by Awesomelewis2007")
     print("")
 
     for i in sys.argv: #goes though the arguments
