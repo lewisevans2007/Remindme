@@ -2,7 +2,7 @@ import os
 import sys
 import shutil
 from sys import exit
-VERSION = "0.1.4"
+VERSION = "0.1.5"
 
 def newreminder(name,due,notes):
     os.chdir("reminders")
@@ -63,8 +63,7 @@ def getnotes(name):
     os.chdir("..")
     return notes
 if __name__ == "__main__":
-    print("RemindMe v"+VERSION,"by Awesomelewis2007")
-    print("")
+    print("RemindMe by Awesomelewis2007\n")
 
     for i in sys.argv: #goes though the arguments
         if i.upper() == "-NEW":
@@ -95,7 +94,25 @@ if __name__ == "__main__":
                 exit()
             deletereminder(reminder_name)
             exit()
-    if getreminders() == []: #Message if there is no reminders
+        if i.upper() == "-S":
+            #Displays a simpler view
+            print("Reminders:")
+            for i in getreminders():
+                i_object = bytes.fromhex(i)
+                decoded_string = i_object.decode("UTF-8")
+                print(decoded_string)
+                exit()
+        if i.upper() == "-VERSION":
+            #Displays the version
+            print(VERSION)
+            exit()
+        if i.upper() == "-GIT" or i.upper() == "-GITHUB":
+            #Displays the github link
+            print("https://github.com/awesomelewis2007/Remindme")
+            exit()
+
+    if getreminders() == []: 
+        #Message if there is no reminders
         print("You have no reminders you can make one by adding the '-new' argument")
         exit()
 
