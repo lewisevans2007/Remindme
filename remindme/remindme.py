@@ -31,7 +31,11 @@ def newreminder(name,due,notes):
 def deletereminder(name):
     name_hex = str(name.encode().hex().upper())
     os.chdir("reminders")
-    shutil.rmtree(name_hex)
+    try:
+        shutil.rmtree(name_hex)
+    except FileNotFoundError:
+        print("Reminder dose not exist!")
+        exit()
     os.chdir("..")
     print("Deleted reminder!")
 def getreminders():
