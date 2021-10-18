@@ -2,7 +2,7 @@ import os
 import sys
 import shutil
 from sys import exit
-VERSION = "0.1.5"
+VERSION = "0.1.6"
 
 def newreminder(name,due,notes):
     os.chdir("reminders")
@@ -108,9 +108,8 @@ if __name__ == "__main__":
             exit()
         if i.upper() == "-GIT" or i.upper() == "-GITHUB":
             #Displays the github link
-            print("https://github.com/awesomelewis2007/Remindme")
+            print("GitHub:https://github.com/awesomelewis2007/Remindme")
             exit()
-
     if getreminders() == []: 
         #Message if there is no reminders
         print("You have no reminders you can make one by adding the '-new' argument")
