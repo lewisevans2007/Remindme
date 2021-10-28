@@ -2,8 +2,10 @@ import os
 import sys
 import shutil
 from sys import exit
-VERSION = "0.1.6"
-
+ver_file = open("VERSION", "r")
+VERSION = ver_file.read()
+ver_file.close()
+del ver_file
 def newreminder(name,due,notes):
     os.chdir("reminders")
     name_hex = str(name.encode().hex().upper())
