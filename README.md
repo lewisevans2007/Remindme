@@ -1,5 +1,4 @@
 # Remindme
-<img src="https://raw.githubusercontent.com/awesomelewis2007/Remindme/main/Documantation/Age_limit.png" width="50px"></img> 
 
 A simple reminder app made in python
 ## Usage
@@ -8,5 +7,3 @@ Remindme runs in the terminal to run remindme do `python remindme.py` this will 
 `-s` will only show a simeple list of your reminders.`-version` will display the version. `-Git` or `-Github` will show the link to the remindme github page.
 ### Privacy
 ![](https://raw.githubusercontent.com/awesomelewis2007/Remindme/main/Documantation/privacy.png)
-### Age Rating
-![](https://raw.githubusercontent.com/awesomelewis2007/Remindme/main/Documantation/Age_limit_2.png)
